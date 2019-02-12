@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destloyer : MonoBehaviour
+public class Destroyer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject masterObj;
+
+        // Start is called before the first frame update
     void Start()
     {
         
@@ -18,6 +20,7 @@ public class Destloyer : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        masterObj.GetComponent<GameMaster>().boxNum--;
         Destroy(gameObject);
     }
 }
