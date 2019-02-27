@@ -21,7 +21,7 @@ public class GameMaster : MonoBehaviour
         nowTime += Time.deltaTime;
         if (boxNum <= 0)
         {
-            GameOver(nowTime.ToString("F0") + "秒でクリアできた！");
+            GameOver("You cleared in " + nowTime.ToString("F0") + "s");
         }
     }
 
